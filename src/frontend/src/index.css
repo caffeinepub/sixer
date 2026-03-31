@@ -1,0 +1,116 @@
+@import url("https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,800&family=DM+Sans:wght@400;500;600&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --radius: 0.5rem;
+    --background: 0.12 0.008 250;
+    --foreground: 0.95 0.01 250;
+    --card: 0.18 0.01 250;
+    --card-foreground: 0.95 0.01 250;
+    --popover: 0.22 0.01 250;
+    --popover-foreground: 0.95 0.01 250;
+    --primary: 0.75 0.17 145;
+    --primary-foreground: 0.1 0.02 145;
+    --secondary: 0.22 0.01 250;
+    --secondary-foreground: 0.85 0.01 250;
+    --muted: 0.22 0.015 250;
+    --muted-foreground: 0.6 0.01 250;
+    --accent: 0.75 0.17 145;
+    --accent-foreground: 0.1 0.02 145;
+    --destructive: 0.6 0.22 25;
+    --destructive-foreground: 0.98 0.005 25;
+    --border: 1 0 0 / 12%;
+    --input: 1 0 0 / 10%;
+    --ring: 0.75 0.17 145;
+    --chart-1: 0.75 0.17 145;
+    --chart-2: 0.65 0.15 200;
+    --chart-3: 0.72 0.18 50;
+    --chart-4: 0.68 0.2 300;
+    --chart-5: 0.7 0.19 25;
+    --sidebar: 0.16 0.01 250;
+    --sidebar-foreground: 0.9 0.01 250;
+    --sidebar-primary: 0.75 0.17 145;
+    --sidebar-primary-foreground: 0.1 0.02 145;
+    --sidebar-accent: 0.22 0.01 250;
+    --sidebar-accent-foreground: 0.85 0.01 250;
+    --sidebar-border: 1 0 0 / 10%;
+    --sidebar-ring: 0.75 0.17 145;
+    /* Cricket brand colors */
+    --pitch-green: 0.75 0.17 145;
+    --pitch-green-glow: 0.65 0.2 145;
+    --gold: 0.8 0.16 85;
+    --dark-bg: 0.12 0.008 250;
+    --glass: 1 0 0 / 5%;
+  }
+
+  .dark {
+    --background: 0.12 0.008 250;
+    --foreground: 0.95 0.01 250;
+    --card: 0.18 0.01 250;
+    --card-foreground: 0.95 0.01 250;
+    --popover: 0.22 0.01 250;
+    --popover-foreground: 0.95 0.01 250;
+    --primary: 0.75 0.17 145;
+    --primary-foreground: 0.1 0.02 145;
+    --secondary: 0.22 0.01 250;
+    --secondary-foreground: 0.85 0.01 250;
+    --muted: 0.22 0.015 250;
+    --muted-foreground: 0.6 0.01 250;
+    --accent: 0.75 0.17 145;
+    --accent-foreground: 0.1 0.02 145;
+    --destructive: 0.6 0.22 25;
+    --destructive-foreground: 0.98 0.005 25;
+    --border: 1 0 0 / 12%;
+    --input: 1 0 0 / 10%;
+    --ring: 0.75 0.17 145;
+    --chart-1: 0.75 0.17 145;
+    --chart-2: 0.65 0.15 200;
+    --chart-3: 0.72 0.18 50;
+    --chart-4: 0.68 0.2 300;
+    --chart-5: 0.7 0.19 25;
+    --sidebar: 0.16 0.01 250;
+    --sidebar-foreground: 0.9 0.01 250;
+    --sidebar-primary: 0.75 0.17 145;
+    --sidebar-primary-foreground: 0.1 0.02 145;
+    --sidebar-accent: 0.22 0.01 250;
+    --sidebar-accent-foreground: 0.85 0.01 250;
+    --sidebar-border: 1 0 0 / 10%;
+    --sidebar-ring: 0.75 0.17 145;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: "DM Sans", sans-serif;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    font-family: "Bricolage Grotesque", sans-serif;
+  }
+}
+
+@layer components {
+  .glass-card {
+    background: oklch(var(--glass));
+    backdrop-filter: blur(12px);
+    border: 1px solid oklch(1 0 0 / 10%);
+  }
+
+  .pitch-glow {
+    box-shadow: 0 0 20px oklch(var(--pitch-green-glow) / 30%);
+  }
+
+  .score-btn {
+    @apply rounded-xl font-bold text-lg transition-all duration-150 active:scale-95 select-none;
+  }
+}
